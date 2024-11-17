@@ -1,23 +1,24 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import html from "./html.jsx";
+
 function App() {
   const [title, setTitle] = useState("This is title");
-  const [mainText, setMainText] = useState("This is Main text ");
+  const [mainText, setMainText] = useState("This is Main text");
   const [imageUrl, setImageUrl] = useState(
-    "https://fastly.picsum.photos/id/1/200/300.jpg?hmac=jH5bDkLr6Tgy3oAg5khKCHeunZMHq0ehBZr6vGifPLY"
+    "https://m.media-amazon.com/images/I/51t04ToKwxL._AC_.jpg"
   );
   const [generatedHtml, setGeneratedHtml] = useState("");
   const [showHtml, setShowHtml] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
 
-  // Update generated HTML in real-time
   useEffect(() => {
     const sanitizedTitle = title.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const sanitizedMainText = mainText
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;");
-    setGeneratedHtml(html);
+    const htmlContent = html(sanitizedTitle, sanitizedMainText, imageUrl); // Generate HTML string
+    setGeneratedHtml(htmlContent);
   }, [title, mainText, imageUrl]);
 
   const copyToClipboard = () => {
@@ -33,7 +34,7 @@ function App() {
         Embeddable HTML Generator
       </h2>
       <div className="flex gap-8">
-        {/* Left Column: Input Form */}
+        {/* Input Form */}
         <div className="flex flex-col w-full md:w-1/2 gap-4">
           <label className="text-black mb-2">Title:</label>
           <input
@@ -59,7 +60,7 @@ function App() {
           />
         </div>
 
-        {/* Right Column: Buttons and Preview */}
+        {/* HTML Preview & Copy */}
         <div className="flex flex-col w-full md:w-1/2 gap-4">
           <button
             onClick={() => setShowHtml(!showHtml)}
@@ -87,8 +88,8 @@ function App() {
           </button>
         </div>
       </div>
-      <h3 className="text-lg font-semibold text-gray-700 mb-2">Preview:</h3>
 
+      <h3 className="text-lg font-semibold text-gray-700 mb-2">Preview:</h3>
       <iframe
         srcDoc={generatedHtml}
         title="Generated Preview"

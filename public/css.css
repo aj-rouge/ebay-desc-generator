@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 
@@ -15,7 +12,7 @@
 
 /* Dynamic content based on data-type attribute */
 .dynamic-text[data-type="welcome"]::before {
-  content: "Welcome! ";
+  content: "feffef! ";
   font-weight: bold;
   color: green;
 }

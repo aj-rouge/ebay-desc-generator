@@ -1,4 +1,4 @@
-const html = (
+const html = (title, mainText, imageUrl) => `
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/css.css" />
@@ -6,6 +6,15 @@ const html = (
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
+    <div class="dynamic-text" data-type="welcome">
+      This is a welcome message.
+    </div>
+    <div class="dynamic-text" data-type="error">
+      Something went wrong.
+    </div>
+    <div class="dynamic-text" data-type="info">
+      Here's some information for you.
+    </div>
     <div style="background-color: #f3f4f6">
       <div class="header">
         <div class="logo">
@@ -159,15 +168,14 @@ const html = (
             <div class="side-container">
               <div class="main-title">
                 <h4>
-                  HP EliteBook 840 G8 14" Quad i7-1185G7 32GB 256GB NVMe Windows
-                  11 Laptop - Opened Never Used
+                ${title}
                 </h4>
               </div>
               <div class="row">
                 <div>
                   <div class="gallery">
                     <div class="product-image-box">
-                      <img src="https://m.media-amazon.com/images/I/51t04ToKwxL._AC_.jpg" />
+                      <img src="${imageUrl}" />
                     </div>
                   </div>
                 </div>
@@ -624,4 +632,6 @@ const html = (
     </div>
   </div>
 );
+`;
+
 export default html;
