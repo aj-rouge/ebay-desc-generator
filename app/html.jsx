@@ -1,7 +1,7 @@
 const html = (title, mainText, imageUrl) => `
   <div>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/css.css" />
+    <link rel="stylesheet" type="text/css" href="https://ebay-desc-generator.vercel.app/css.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
       rel="stylesheet"
