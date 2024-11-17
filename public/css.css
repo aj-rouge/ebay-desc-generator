@@ -12,7 +12,7 @@
 
 /* Dynamic content based on data-type attribute */
 .dynamic-text[data-type="welcome"]::before {
-  content: "feffef! ";
+  content: "This and two below - dynamically can be changed and updated ";
   font-weight: bold;
   color: green;
 }
