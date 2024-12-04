@@ -24,10 +24,11 @@
 }
 
 .dynamic-text[data-type="info"]::before {
-  content: "Info: ";
+  content: "Contact: ";
   font-weight: bold;
-  color: blue;
+  color: green;
 }
+
 h1,
 h2,
 h3,

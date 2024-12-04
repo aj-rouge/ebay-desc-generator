@@ -13,7 +13,7 @@ const html = (title, mainText, imageUrl) => `
       Something went wrong.
     </div>
     <div class="dynamic-text" data-type="info">
-      Here's some information for you.
+      support@rougetechnologies.com
     </div>
     <div style="background-color: #f3f4f6">
       <div class="header">
