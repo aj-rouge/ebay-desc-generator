@@ -18,7 +18,7 @@ const html = (title, mainText, imageUrl) => `
     <div style="background-color: #f3f4f6">
       <div class="header">
         <div class="logo">
-          <img src="https://cdn.shopify.com/s/files/1/0868/2979/3611/files/banner-ebay.png?v=1731788868s" />
+          <img src="https://cdn.shopify.com/s/files/1/0868/2979/3611/files/banner-ebay.png" />
         </div>
         <div class="website">
           <h4>
